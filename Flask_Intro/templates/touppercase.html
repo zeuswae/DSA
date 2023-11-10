@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
+    <title>Convert to Uppercase</title>
+    <style>
+        body {
+            background-color: #c0c0c0; /* Minecraft block color */
+            font-family: "Sometype Mono";
+        }
+
+        #exitbutton {
+            font-family: "Sometype Mono";
+            background-color: #1a1a1a; /* Minecraft button color */
+            color: #c0c0c0; /* Minecraft text color */
+            width: 250px;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            transition-duration: 0.5s;
+            border-radius: 15px;
+            border-style: solid;
+            border-color: #1a1a1a; /* Minecraft button color */
+        }
+
+        #exitbutton:hover {
+            background-color: #8b4513; /* Minecraft dirt block color */
+            border-color: #1a1a1a; /* Minecraft button color */
+            color: #c0c0c0; /* Minecraft text color */
+            width: 250px;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            transition-duration: 0.5s;
+            border-radius: 15px;
+        }
+
+        button {
+            font-family: "Sometype Mono";
+            background-color: #1a1a1a; /* Minecraft button color */
+            color: #c0c0c0; /* Minecraft text color */
+            border-style: solid;
+            border-color: #1a1a1a; /* Minecraft button color */
+            padding: 15px 32px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition-duration: 0.5s;
+        }
+
+        button:hover {
+            background-color: #8b4513; /* Minecraft dirt block color */
+            border-color: #1a1a1a; /* Minecraft button color */
+            color: #c0c0c0; /* Minecraft text color */
+        }
+
+        #hi {
+            background-color: #8b4513; /* Minecraft dirt block color */
+            border-style: solid;
+            border-width: 5px;
+            border-radius: 30px;
+            width: 500px;
+            height: 200px;
+            position: relative;
+            left: 500px;
+            top: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label {
+            font-family: "Sometype Mono";
+            font-size: 20px;
+            color: #1a1a1a; /* Minecraft text color */
+        }
+
+        input {
+            font-family: "Sometype Mono";
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-family: "Sometype Mono";
+            font-weight: bold;
+            font-size: 50px;
+            color: #1a1a1a; /* Minecraft text color */
+        }
+
+        p {
+            font-family: "Sometype Mono";
+            font-size: 20px;
+            color: #1a1a1a; /* Minecraft text color */
+        }
+
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Convert String to Uppercase</h1>
+    </center>
+
+    <div id="hi">
+
+        <form action="/toupper" method="post">
+            <label for="inputString">Mine a string:</label>
+            <input type="text" id="inputString" name="inputString">
+            <button type="submit">Craft</button>
+        </form>
+
+        {% if result %}
+        <p>Converted string: {{ result }}</p>
+        {% endif %}
+    </div>
+    <button id="exitbutton" onclick="location.href='/';">Back to Home</button>
+</body>
+</html>

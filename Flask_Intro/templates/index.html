@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: url_for(mc bg.png) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        h1 {
+            font-family: "Sometype Mono";
+            font-weight: bold;
+            font-size: 80px;
+            color: #1a1a1a; /* Minecraft text color */
+        }
+
+        p {
+            font-family: "Sometype Mono";
+            font-size: 20px;
+            color: #1a1a1a; /* Minecraft text color */
+        }
+
+        #about {
+            background-color: #8b4513; /* Minecraft dirt block color */
+            border-style: solid;
+            border-radius: 30px;
+            border-width: 5px;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            left: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #works {
+            background-color: #8b4513; /* Minecraft dirt block color */
+            border-style: solid;
+            border-width: 5px;
+            border-radius: 30px;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            left: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            font-family: "Sometype Mono";
+            background-color: #1a1a1a; /* Minecraft button color */
+            color: #c0c0c0; /* Minecraft text color */
+            border-style: solid;
+            border-color: #1a1a1a; /* Minecraft button color */
+            padding: 15px 32px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition-duration: 0.5s;
+        }
+
+        button:hover {
+            background-color: #8b4513; /* Minecraft dirt block color */
+            border-color: #1a1a1a; /* Minecraft button color */
+            color: #c0c0c0; /* Minecraft text color */
+        }
+
+        .container {
+            padding: 20px;
+            position: relative;
+            right: 390px;
+        }
+
+        .subcontainer {
+            float: left;
+            padding: 20px;
+            border: 2px solid;
+            margin: 20px;
+        }
+
+    </style>
+    <title>Home Page</title>
+</head>
+
+<body>
+    <center>
+        <h1>Welcome to my Minecraft Website</h1>
+    </center>
+    <div class="container">
+        <div id="about" class="subcontainer">
+            <button type="button" onclick="location.href='/profile'">Mine Profile</button><br>
+            <button type="button" onclick="location.href='/contact'">Craft Contact</button>
+        </div>
+
+        <div id="works" class="subcontainer">
+            <center>
+                <p>My Crafting Works</p>
+            </center>
+            <button type="button" onclick="location.href='/toupper'">To Uppercase</button><br>
+            <button type="button" onclick="location.href='/circle'">Mine Area of a Circle</button><br>
+            <button type="button" onclick="location.href='/areaOfTriangle'">Mine Area of a Triangle</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

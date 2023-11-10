@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Area of a Triangle - Minecraft Style</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #c0c0c0; /* Minecraft block color */
+            font-family: "Sometype Mono";
+        }
+
+        h1 {
+            font-family: "Sometype Mono";
+            font-weight: bold;
+            font-size: 50px;
+            color: #1a1a1a; /* Minecraft text color */
+        }
+
+        #hi {
+            background-color: #8b4513; /* Minecraft dirt block color */
+            border-style: solid;
+            border-width: 5px;
+            border-radius: 30px;
+            width: 900px;
+            height: 200px;
+            position: relative;
+            left: 330px;
+            top: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label {
+            font-family: "Sometype Mono";
+            font-size: 20px;
+            color: #1a1a1a; /* Minecraft text color */
+        }
+
+        input {
+            font-family: "Sometype Mono";
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            font-family: "Sometype Mono";
+            background-color: #1a1a1a; /* Minecraft button color */
+            color: #c0c0c0; /* Minecraft text color */
+            border-style: solid;
+            border-color: #1a1a1a; /* Minecraft button color */
+            padding: 15px 32px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition-duration: 0.5s;
+        }
+
+        button:hover {
+            background-color: #8b4513; /* Minecraft dirt block color */
+            border-color: #1a1a1a; /* Minecraft button color */
+            color: #c0c0c0; /* Minecraft text color */
+        }
+
+        p {
+            font-family: "Sometype Mono";
+            color: #ff0000; /* Minecraft redstone color */
+        }
+
+        #exitbutton {
+            font-family: "Sometype Mono";
+            background-color: #1a1a1a; /* Minecraft button color */
+            color: #c0c0c0; /* Minecraft text color */
+            width: 250px;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            transition-duration: 0.5s;
+            border-radius: 15px;
+            border-style: solid;
+            border-color: #1a1a1a; /* Minecraft button color */
+        }
+
+        #exitbutton:hover {
+            background-color: #8b4513; /* Minecraft dirt block color */
+            border-color: #1a1a1a; /* Minecraft button color */
+            color: #c0c0c0; /* Minecraft text color */
+            width: 250px;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            transition-duration: 0.5s;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Find the area of a triangle</h1>
+    </center>
+    <div id="hi">
+        <form action="/areaOfTriangle" method="post">
+            <label for="base">Mine a base:</label>
+            <input type="number" id="base" name="base">
+            <label for="height">Mine a height:</label>
+            <input type="number" id="height" name="height">
+            <button type="submit">Craft</button>
+        </form>
+
+        {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+        {% elif result %}
+        <p>Area of the Triangle: {{ result|round(2) }} m^2</p>
+        {% endif %}
+    </div>
+
+    <button id="exitbutton" onclick="location.href='/';">Back to Home</button>
+</body>
+
+</html>

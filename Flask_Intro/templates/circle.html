@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Area of a Circle - Minecraft Style</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Noto Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: 1s linear;
+        }
+
+        body {
+            background-color: #c0c0c0; /* Minecraft block color */
+            font-family: "Noto Sans";
+        }
+
+        h1 {
+            font-family: "Noto Sans";
+            font-weight: bold;
+            font-size: 50px;
+            color: #1a1a1a; /* Minecraft text color */
+        }
+
+        #hi {
+            background-color: #8b4513; /* Minecraft dirt block color */
+            border-style: solid;
+            border-width: 5px;
+            border-radius: 30px;
+            width: 900px;
+            height: 200px;
+            position: relative;
+            left: 330px;
+            top: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label {
+            font-family: "Noto Sans";
+            font-size: 20px;
+            color: #1a1a1a; /* Minecraft text color */
+        }
+
+        input {
+            font-family: "Noto Sans";
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            font-family: "Noto Sans";
+            background-color: #1a1a1a; /* Minecraft button color */
+            color: #c0c0c0; /* Minecraft text color */
+            border-style: solid;
+            border-color: #1a1a1a; /* Minecraft button color */
+            padding: 15px 32px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition-duration: 0.5s;
+        }
+
+        button:hover {
+            background-color: #8b4513; /* Minecraft dirt block color */
+            border-color: #1a1a1a; /* Minecraft button color */
+            color: #c0c0c0; /* Minecraft text color */
+        }
+
+        p {
+            font-family: "Noto Sans";
+            color: #ff0000; /* Minecraft redstone color */
+        }
+
+        #exitbutton {
+            font-family: "Noto Sans";
+            background-color: #1a1a1a; /* Minecraft button color */
+            color: #c0c0c0; /* Minecraft text color */
+            width: 250px;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            transition-duration: 0.5s;
+            border-radius: 15px;
+            border-style: solid;
+            border-color: #1a1a1a; /* Minecraft button color */
+        }
+
+        #exitbutton:hover {
+            background-color: #8b4513; /* Minecraft dirt block color */
+            border-color: #1a1a1a; /* Minecraft button color */
+            color: #c0c0c0; /* Minecraft text color */
+            width: 250px;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            transition-duration: 0.5s;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Find the area of a circle</h1>
+    </center>
+    <div id="hi">
+        <form action="/circle" method="post">
+            <label for="radius">Enter a radius:</label>
+            <input type="number" id="radius" name="radius">
+            <button type="submit">Mine for Area</button>
+        </form>
+
+        {% if error_message %}
+        <p>{{ error_message }}</p>
+        {% elif result %}
+        <p>Area of the circle: {{ result|round(2) }} m^2</p>
+        {% endif %}
+    </div>
+
+    <button id="exitbutton" onclick="location.href='/';">Back to Home</button>
+</body>
+
+</html>

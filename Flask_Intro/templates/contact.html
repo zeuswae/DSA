@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
+    <title>Profile Page</title>
+    <style>
+        body{
+            background-color: #c0c0c0; /* Minecraft block color */
+        }
+        p{
+            font-family: "Sometype Mono";
+            color: #1a1a1a; /* Minecraft text color */
+            border-style: dotted;
+            font-size: 40px;
+        }
+        h1{
+            font-family: "Sometype Mono";
+            font-weight: bold;
+            font-size: 85px;
+            color: #1a1a1a; /* Minecraft text color */
+        }
+        button
+        {
+            background-color: transparent;
+            height: 300px;
+            width: 300px;
+            border-color: transparent;
+            cursor: pointer;
+            transition-duration: 0.3s;
+        }
+        button:hover
+        {
+            background-color: transparent;
+            height: 300px;
+            width: 300px;
+            border-color: #1a1a1a; /* Minecraft text color */
+            border-width: 3px;
+        }
+        img
+        {
+            height: 200px;
+            width: 200px;
+        }
+        #exitbutton
+        {
+            font-family: "Sometype Mono";
+            background-color: #8b4513; /* Minecraft dirt block color */
+            color: #c0c0c0; /* Minecraft text color */
+            width: 250px;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            transition-duration: 0.5s;
+            border-radius: 15px;
+            border-style: solid;
+            border-color: #1a1a1a; /* Minecraft text color */
+        }
+        #exitbutton:hover
+        {
+            font-family: "Sometype Mono";
+            background-color: #8b4513; /* Minecraft dirt block color */
+            border-color: #1a1a1a; /* Minecraft text color */
+            color: #c0c0c0; /* Minecraft text color */
+            width: 250px;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            transition-duration: 0.5s;
+            border-radius: 15px;
+        }
+        .container
+        {
+            padding: 20px;
+            position: relative;
+            right: 390px;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Get in touch with me!</h1></center>
+    <center>
+    <div class="subcontainer">
+        <a href="https://www.facebook.com/bslnjoshuA">
+        <button><img src="{{ url_for('static', filename='fb.png') }}"></button>
+        </a>
+
+        <a href="https://www.instagram.com/zeuswaee/">
+        <button><img src="{{ url_for('static', filename='ig.png') }}"></button>
+        </a>
+
+        <a href="mail:jshbasilan@gmail.com">
+        <button><img src="{{ url_for('static', filename='gmail.png') }}"></button>
+        </a>
+        <button id="exitbutton
